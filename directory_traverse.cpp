@@ -47,16 +47,16 @@ int main(int argc, char const *argv[])
         std::cin >> path;
     }
 
-    directory_scanner scanner;
+    //directory_scanner scanner;
     std::vector<file_entry> dir_list;
     std::vector<file_entry> file_list;
-    scanner.scan(path, file_list, dir_list);
+    directory_scanner::scan(path, file_list, dir_list);
     while(!dir_list.empty()){
         file_entry dir = dir_list.back();
         dir_list.pop_back();
 
         std::string new_path = dir.path;
-        scanner.scan(new_path, file_list, dir_list);
+        directory_scanner::scan(new_path, file_list, dir_list);
     }
 
 

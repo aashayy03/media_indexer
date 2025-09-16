@@ -3,9 +3,20 @@
 
 #include <string>
 
-class media_checker{
+class media_checker{    
     public:
-    bool is_audio_file(const std::string& file_path);
+
+    enum class audio_type{
+        UNKNOWN,
+        MP3,
+        WAV,
+        FLAC
+    };
+
+    static audio_type detect_audio_type(const std::string& filepath);
+
+    static std::string tostring(audio_type type);
+
 };
 
 #endif

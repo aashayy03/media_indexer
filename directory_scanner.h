@@ -6,7 +6,7 @@
 
 class directory_scanner{
     public:
-    void scan(const std::string& directory_path, 
+    static void scan(const std::string& directory_path, 
         std::vector<file_entry>& file_list, 
         std::vector<file_entry>& dir_list);
 
