@@ -15,7 +15,7 @@ class media_checker{
 
     static audio_type detect_audio_type(const std::string& filepath);
 
-    static std::string tostring(audio_type type);
+    static std::string audio_type_tostring(audio_type type);
 
 };
 
