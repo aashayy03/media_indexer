@@ -36,38 +36,37 @@ void directory_scanner::scan(const std::string& directory_path,
     return;
 }
 
-
-int main(int argc, char const *argv[])
-{
-    std::string path;
-    if(argc > 1){
-        path = argv[1];
-    } else{
-        std::cout << "enter path: ";
-        std::cin >> path;
-    }
-
-    //directory_scanner scanner;
-    std::vector<file_entry> dir_list;
-    std::vector<file_entry> file_list;
-    directory_scanner::scan(path, file_list, dir_list);
-    while(!dir_list.empty()){
-        file_entry dir = dir_list.back();
-        dir_list.pop_back();
-
-        std::string new_path = dir.path;
-        directory_scanner::scan(new_path, file_list, dir_list);
-    }
-
-
-    for(file_entry f: file_list){
-        std::cout << "File" << "\n" 
-                  << "name: " << f.filename << "\n"
-                  << "inode: " << f.inode << "\n"
-                  << "path: "  << f.path << "\n"
-                  << std::endl;
-    }
-    
-    return 0;
-}
+//int main(int argc, char const *argv[])
+//{
+//    std::string path;
+//    if(argc > 1){
+//        path = argv[1];
+//    } else{
+//        std::cout << "enter path: ";
+//        std::cin >> path;
+//    }
+//
+//    //directory_scanner scanner;
+//    std::vector<file_entry> dir_list;
+//    std::vector<file_entry> file_list;
+//    directory_scanner::scan(path, file_list, dir_list);
+//    while(!dir_list.empty()){
+//        file_entry dir = dir_list.back();
+//        dir_list.pop_back();
+//
+//        std::string new_path = dir.path;
+//        directory_scanner::scan(new_path, file_list, dir_list);
+//    }
+//
+//
+//    for(file_entry f: file_list){
+//        std::cout << "File" << "\n" 
+//                  << "name: " << f.filename << "\n"
+//                  << "inode: " << f.inode << "\n"
+//                  << "path: "  << f.path << "\n"
+//                  << std::endl;
+//    }
+//    
+//    return 0;
+//}
 

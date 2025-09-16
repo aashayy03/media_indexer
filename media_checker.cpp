@@ -45,17 +45,17 @@ std::string media_checker::audio_type_tostring(audio_type type){
     }
 }
 
-int main(int argc, char const *argv[])
-{
-    std::string filepath;
-    if(argc > 1){
-        filepath = argv[1];
-    }else{
-        std::cout << "pass filepath as command line argument" <<std::endl;
-        return 1;
-    }
-
-    media_checker::audio_type type =  media_checker::detect_audio_type(filepath);
-    std::cout << media_checker::audio_type_tostring(type) << std::endl;
-    return 0;
-}
+//int main(int argc, char const *argv[])
+//{
+//    std::string filepath;
+//    if(argc > 1){
+//        filepath = argv[1];
+//    }else{
+//        std::cout << "pass filepath as command line argument" <<std::endl;
+//        return 1;
+//    }
+//
+//    media_checker::audio_type type =  media_checker::detect_audio_type(filepath);
+//    std::cout << media_checker::audio_type_tostring(type) << std::endl;
+//    return 0;
+//}
